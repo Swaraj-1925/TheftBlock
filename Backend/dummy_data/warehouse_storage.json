@@ -1,0 +1,20 @@
+{
+    "InventoryReceipt": [
+    {"receipt_id": "INV_REC1", "supplier_receipt_id": "SUP_REC1", "date_received": "2025-03-02T15:00:00", "total_products_received": 2},
+    {"receipt_id": "INV_REC2", "supplier_receipt_id": "SUP_REC2", "date_received": "2025-03-03T16:00:00", "total_products_received": 1}
+  ],
+  "InventoryReceiptItem": [
+    {"receipt_item_id": "INV_ITEM1", "receipt_id": "INV_REC1", "product_id": "PROD1"},
+    {"receipt_item_id": "INV_ITEM2", "receipt_id": "INV_REC1", "product_id": "PROD2"},
+    {"receipt_item_id": "INV_ITEM3", "receipt_id": "INV_REC2", "product_id": "PROD3"}
+  ],
+  "Shelf": [
+    {"shelf_id": "SHELF1", "shelf_location": "Aisle 1, Shelf 2"},
+    {"shelf_id": "SHELF2", "shelf_location": "Aisle 3, Shelf 1"}
+  ],
+  "ShelfInventory": [
+    {"shelf_inventory_id": "SHELF_INV1", "shelf_id": "SHELF1", "product_id": "PROD1", "added_timestamp": "2025-03-03T17:00:00", "removed_timestamp": null},
+    {"shelf_inventory_id": "SHELF_INV2", "shelf_id": "SHELF1", "product_id": "PROD2", "added_timestamp": "2025-03-03T18:00:00", "removed_timestamp": null},
+    {"shelf_inventory_id": "SHELF_INV3", "shelf_id": "SHELF2", "product_id": "PROD3", "added_timestamp": "2025-03-04T10:00:00", "removed_timestamp": "2025-03-05T12:00:00"}
+  ]
+}
