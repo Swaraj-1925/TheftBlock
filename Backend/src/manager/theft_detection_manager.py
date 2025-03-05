@@ -1,8 +1,13 @@
+import asyncio
+
+from sqlmodel import select
+
 from Backend.src.Db.database_management import DatabaseManagement
 from sqlmodel.ext.asyncio.session import AsyncSession
 
 from Backend.src.Db.models import SupplierReceipt, InventoryReceipt, InventoryReceiptItem, SupplierReceiptItem, Sale, \
-    ShelfInventory
+    ShelfInventory, Product
+from Backend.src.dummy.uhf_rfid import UHF_RFID
 
 
 class TheftDetectionManager:
@@ -78,3 +83,49 @@ class TheftDetectionManager:
             raise ValueError(f"Unsupported stage: {stage}. Use 'supplier_to_warehouse' or 'warehouse_to_consumer'.")
 
         return self._analyze_theft(total_sent, sent_product_ids, total_received, received_product_ids, stage_name)
+
+    async def detect_shelf_theft(self, shelf_id: str, check_interval_seconds: int = 5, max_checks: int = 3):
+        """Periodically check a shelf for missing available products using a simulated RFID reader."""
+        print(f"\nStarting shelf theft detection for shelf {shelf_id} every {check_interval_seconds} seconds...")
+
+        # Get expected available products from ShelfInventory
+        stmt = select(ShelfInventory).where(
+            ShelfInventory.shelf_id == shelf_id,
+            ShelfInventory.removed_timestamp.is_(None)
+        )
+        result = await self.session.exec(stmt)
+        shelf_items = result.all()
+
+        expected_rfids = set()
+        for item in shelf_items:
+            product = await self.db.search(Product, all_results=False, product_id=item.product_id)
+            if product and product.status == "available":
+                expected_rfids.add(product.rfid_tag)
+
+        if not expected_rfids:
+            print(f"No available products on shelf {shelf_id} to check.")
+            return
+
+        # Simulate RFID reader for the shelf (using one sensor instance for simplicity)
+        rfid_reader = UHF_RFID(next(iter(expected_rfids)))  # Use first RFID as reader ID
+
+        for check in range(max_checks):
+            print(f"\nShelf check #{check + 1}")
+            detected_rfids = await rfid_reader.scan_shelf(self.session, shelf_id)
+            detected_rfids_set = set(detected_rfids)
+            missing_rfids = expected_rfids - detected_rfids_set
+
+            if missing_rfids:
+                missing_products = []
+                for rfid in missing_rfids:
+                    product = await self.db.search(Product, all_results=False, rfid_tag=rfid)
+                    if product:
+                        missing_products.append(product.product_id)
+                print(f"Shelf theft detected on {shelf_id}! Missing products: {missing_products}")
+            else:
+                print(f"No shelf theft detected on {shelf_id}. All products present.")
+
+            if check < max_checks - 1:  # Don’t sleep after the last check
+                await asyncio.sleep(check_interval_seconds)
+
+        print(f"Shelf theft detection completed for {shelf_id}.")
