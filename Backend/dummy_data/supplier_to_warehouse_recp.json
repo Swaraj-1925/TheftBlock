@@ -1,5 +1,6 @@
 {
-    "Supplier": [
+  
+  "Supplier": [
       {"supplier_id": "SUP1", "supplier_name": "Supplier A"},
       {"supplier_id": "SUP2", "supplier_name": "Supplier B"}
     ],
