@@ -2,13 +2,13 @@ from typing_extensions import Optional
 
 from sqlmodel.ext.asyncio.session import AsyncSession
 from Backend.src.Db.database_management import DatabaseManagement
-from Backend.src.Db.models.SensorModel import SensorModel
 from Backend.src.dummy.base_sensor import BaseSensor
+from Backend.src.Db.models import Product
 
-
+from sqlmodel import select
 class UHF_RFID(BaseSensor):
-    def __init__(self):
-        super().__init__()
+    def __init__(self,rfid_tag):
+        super().__init__(rfid_tag)
         self.range = 2 #Range of Sensor
 
     def set_range(self, meters:Optional[int]=None):
@@ -18,22 +18,25 @@ class UHF_RFID(BaseSensor):
 
 
     async def scan_item(self,session: AsyncSession)->Optional[str]:
-        db = DatabaseManagement(session)
-        result = await db.search(SensorModel,all_results=False,sensor_id=self.sensor_id)
-        if result:
-            return result
+        stmt = select(Product).where(Product.rfid_tag == self.sensor_id)
+        result = await session.exec(stmt)
+        product = result.first()
+        if product:
+            print(f"Scanned product: {product}")
         else:
-            return None
+            print(f"No product found with RFID {self.sensor_id}")
+        return product
+
     async def mark_as_sold(self,session: AsyncSession):
-        db = DatabaseManagement(session)
-        update_data = {"sensor_id": self.sensor_id, "status": "sold"}
-        await  db.update_row(
-            model=SensorModel,
-            search_criteria={"sensor_id": self.sensor_id},
-            update_data=update_data,
-            insert_if_not_exist=False
-        )
-        print(f"Item {self.sensor_id} marked as sold")
+        product = await self.scan_item(session)
+        if product:
+            product.status = "sold"
+            session.add(product)
+            await session.commit()
+            await session.refresh(product)
+            print(f"Product {product.product_id} marked as sold by sensor {self.sensor_id}")
+        else:
+            print(f"No product found with RFID {self.sensor_id} to mark as sold.")
 
     async def is_sold(self,session: AsyncSession) -> bool:
         return await self.scan_item(session=session) == "sold"
