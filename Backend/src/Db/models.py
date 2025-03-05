@@ -12,7 +12,7 @@ class Product(SQLModel, table=True):
     product_id: str = Field(default=None, primary_key=True)
     rfid_tag: str = Field(unique=True)  # Unique RFID tag for each product
     product_name: str
-    status: str = Field(default="available")  # e.g., "available" or "sold"
+    status: str = Field(default="available")  #"available","sold","missing"
     supplier_id: str = Field(foreign_key="supplier.supplier_id")
 
 
@@ -52,8 +52,8 @@ class ShelfInventory(SQLModel, table=True):
     shelf_inventory_id: str = Field(default=None, primary_key=True)
     shelf_id: str = Field(foreign_key="shelf.shelf_id")
     product_id: str = Field(foreign_key="product.product_id")
-    added_timestamp: datetime  # When product was placed on shelf
-    removed_timestamp: Optional[datetime] = None  # When product was sold/removed
+    added_timestamp: datetime  # When the product was placed on shelf
+    removed_timestamp: Optional[datetime] = None  # When the product was sold/removed
 
 # Sales table (products scanned and sold)
 class Sale(SQLModel, table=True):
