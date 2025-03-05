@@ -1,0 +1,20 @@
+{
+    "Supplier": [
+      {"supplier_id": "SUP1", "supplier_name": "Supplier A"},
+      {"supplier_id": "SUP2", "supplier_name": "Supplier B"}
+    ],
+    "Product": [
+      {"product_id": "PROD1", "rfid_tag": "RFID123", "product_name": "Laptop", "status": "available", "supplier_id": "SUP1"},
+      {"product_id": "PROD2", "rfid_tag": "RFID124", "product_name": "Phone", "status": "available", "supplier_id": "SUP1"},
+      {"product_id": "PROD3", "rfid_tag": "RFID125", "product_name": "Tablet", "status": "sold", "supplier_id": "SUP2"}
+    ],
+    "SupplierReceipt": [
+      {"receipt_id": "SUP_REC1", "supplier_id": "SUP1", "date_sent": "2025-03-01T10:00:00", "total_products_sent": 2},
+      {"receipt_id": "SUP_REC2", "supplier_id": "SUP2", "date_sent": "2025-03-02T12:00:00", "total_products_sent": 1}
+    ],
+    "SupplierReceiptItem": [
+      {"receipt_item_id": "ITEM1", "receipt_id": "SUP_REC1", "product_id": "PROD1"},
+      {"receipt_item_id": "ITEM2", "receipt_id": "SUP_REC1", "product_id": "PROD2"},
+      {"receipt_item_id": "ITEM3", "receipt_id": "SUP_REC2", "product_id": "PROD3"}
+    ]
+}

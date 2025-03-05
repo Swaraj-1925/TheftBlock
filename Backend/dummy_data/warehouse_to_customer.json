@@ -1,0 +1,24 @@
+{
+    "Supplier": [
+      {"supplier_id": "SUP1", "supplier_name": "Supplier A"},
+      {"supplier_id": "SUP2", "supplier_name": "Supplier B"}
+    ],
+    "Product": [
+      {"product_id": "PROD1", "rfid_tag": "RFID123", "product_name": "Laptop", "status": "available", "supplier_id": "SUP1"},
+      {"product_id": "PROD2", "rfid_tag": "RFID124", "product_name": "Phone", "status": "available", "supplier_id": "SUP1"},
+      {"product_id": "PROD3", "rfid_tag": "RFID125", "product_name": "Tablet", "status": "sold", "supplier_id": "SUP2"}
+    ],
+    "Shelf": [
+      {"shelf_id": "SHELF1", "shelf_location": "Aisle 1, Shelf 2"},
+      {"shelf_id": "SHELF2", "shelf_location": "Aisle 3, Shelf 1"}
+    ],
+    "ShelfInventory": [
+      {"shelf_inventory_id": "SHELF_INV1", "shelf_id": "SHELF1", "product_id": "PROD1", "added_timestamp": "2025-03-03T17:00:00", "removed_timestamp": "2025-03-05T12:30:00"},
+      {"shelf_inventory_id": "SHELF_INV2", "shelf_id": "SHELF1", "product_id": "PROD2", "added_timestamp": "2025-03-03T18:00:00", "removed_timestamp": null},
+      {"shelf_inventory_id": "SHELF_INV3", "shelf_id": "SHELF2", "product_id": "PROD3", "added_timestamp": "2025-03-04T10:00:00", "removed_timestamp": "2025-03-05T12:00:00"}
+    ],
+    "Sale": [
+      {"sale_id": "SALE1", "product_id": "PROD1", "sale_timestamp": "2025-03-05T12:30:00"},
+      {"sale_id": "SALE2", "product_id": "PROD3", "sale_timestamp": "2025-03-05T12:00:00"}
+    ]
+  }
