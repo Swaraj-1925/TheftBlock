@@ -1,4 +1,4 @@
-# Backend/src/db_init.py
+# Backend/src/ml/db_init.py
 from sqlalchemy.ext.asyncio import AsyncEngine
 from sqlmodel import SQLModel
 
