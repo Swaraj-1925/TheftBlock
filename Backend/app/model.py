@@ -1,7 +1,6 @@
 from pydantic import BaseModel
 
 
-class SupplierCreateRequest(BaseModel):
+class SupplierCreate(BaseModel):
     supplier_id: str
     supplier_name: str
-    product_count: int
