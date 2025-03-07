@@ -447,8 +447,9 @@ class WarehouseManager:
         statistics = {
             "inventory_id": inventory_id,
             "location": inventory.location,
-            "total_racks": len(racks),
+            "racks":racks,
             "total_shelves": len(all_shelves),
+            "all_shelves":all_shelves,
             "products_on_shelf": len(products_on_shelf),
             "total_shelf_value": total_shelf_value,
             "total_sales": len(sales),
