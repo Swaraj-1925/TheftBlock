@@ -18,7 +18,7 @@ class BaseSensor:
         product_id =f"PRODUCT_{sensor_id_hash}"
         supplier_id = f"SUPPLIER_{sensor_id_hash}"
 
-        se_data = Product(product_id=product_id,rfid_tag=self.sensor_id,product_name="Product")
+        sensor_data = Product(product_id=product_id,rfid_tag=self.sensor_id,product_name="Product")
         try:
             db = DatabaseManagement(session)
             await db.insert(sensor_data)
