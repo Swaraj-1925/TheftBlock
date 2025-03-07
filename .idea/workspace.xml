@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c305951e-7a74-46ed-87b5-26505d484336" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Backend/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/app/inventory_routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/app/res_models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/app/services/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/app/services/inventorie.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/server.py" afterDir="false" />
+    <list default="true" id="c305951e-7a74-46ed-87b5-26505d484336" name="Changes" comment="FEATURES by Swaraj: Implemented Following routes for inventories , get all , get specific, get statistical , get products">
+      <change afterPath="$PROJECT_DIR$/Backend/README.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/Db/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/Db/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/manager/warehouse_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/manager/warehouse_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/app/inventory_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app/inventory_routes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741350842286</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="FEATURES by Swaraj: Implemented Following routes for inventories , get all , get specific, get statistical , get products">
+      <option name="closed" value="true" />
+      <created>1741378251365</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1741378251365</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +227,8 @@
     <MESSAGE value="FEATURE: Implemented check for theft on shelf after an interval" />
     <MESSAGE value="FEATURE: Reimplmented warehouse_manager , main, supplier_manager, models ,added requirements.txt," />
     <MESSAGE value="FEATURES by Swaraj: Reimplemented warehouse_manager , main, supplier_manager, models ,added requirements.txt," />
-    <option name="LAST_COMMIT_MESSAGE" value="FEATURES by Swaraj: Reimplemented warehouse_manager , main, supplier_manager, models ,added requirements.txt," />
+    <MESSAGE value="FEATURES by Swaraj: Implemented Following routes for inventories , get all , get specific, get statistical , get products" />
+    <option name="LAST_COMMIT_MESSAGE" value="FEATURES by Swaraj: Implemented Following routes for inventories , get all , get specific, get statistical , get products" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

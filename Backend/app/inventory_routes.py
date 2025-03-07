@@ -8,7 +8,7 @@ from Backend.app.services.inventorie import get_list_all_inventories, get_invent
 from Backend.src.Db.db import get_session
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-inventory_router = APIRouter(prefix="/inventory")
+inventory_router = APIRouter(prefix="/inventory",tags=["inventory"])
 
 @inventory_router.get("/", response_model=list[InventoryResponse])
 async def fetch_all_inventories(session: AsyncSession = Depends(get_session)):
