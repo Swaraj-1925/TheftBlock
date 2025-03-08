@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c305951e-7a74-46ed-87b5-26505d484336" name="Changes" comment="FEATURES by Swaraj: Implemented Readme in Backend and added tag for inventory routes">
+    <list default="true" id="c305951e-7a74-46ed-87b5-26505d484336" name="Changes" comment="FEATURES by Swaraj: Added sales in return of statistics , Added description for inventory routes">
+      <change afterPath="$PROJECT_DIR$/Backend/app/supplier_routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/TestRoute.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/services/test.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/app/inventory_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app/inventory_routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/app/res_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app/res_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/app/services/inventorie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app/services/inventorie.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/manager/warehouse_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/manager/warehouse_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/main.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,25 +59,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;v1.0&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/TheftBlock/TheftBlock&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.app.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "v1.0",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/TheftBlock/TheftBlock/Frontend/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "terminal",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\TheftBlock\TheftBlock\Frontend\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\TheftBlock\TheftBlock\Backend" />
       <recent name="E:\TheftBlock\TheftBlock\Backend\src" />
@@ -211,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741380195114</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="FEATURES by Swaraj: Added sales in return of statistics , Added description for inventory routes">
+      <option name="closed" value="true" />
+      <created>1741434912012</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1741434912012</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +254,8 @@
     <MESSAGE value="FEATURES by Swaraj: Reimplemented warehouse_manager , main, supplier_manager, models ,added requirements.txt," />
     <MESSAGE value="FEATURES by Swaraj: Implemented Following routes for inventories , get all , get specific, get statistical , get products" />
     <MESSAGE value="FEATURES by Swaraj: Implemented Readme in Backend and added tag for inventory routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="FEATURES by Swaraj: Implemented Readme in Backend and added tag for inventory routes" />
+    <MESSAGE value="FEATURES by Swaraj: Added sales in return of statistics , Added description for inventory routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="FEATURES by Swaraj: Added sales in return of statistics , Added description for inventory routes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
