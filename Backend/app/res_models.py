@@ -28,6 +28,7 @@ class ProductResponse(BaseModel):
     product_name: str
     status: str  # Using string instead of enum for better API compatibility
     price: float
+    supplier_id:str
     shelf_id: Optional[str] = None
     rack_id: Optional[str] = None
 
@@ -64,7 +65,7 @@ class ProductDetailsResponse(BaseModel):
     """Response for products in an inventory"""
     inventory_id: str
     products: List[ProductResponse]
-    total_products: int = Field(description="Total number of products returned")
+    total_products: int = Field(description="Total number of products returned",default=0)
 
 
 class InventoryStatisticsResponse(BaseModel):

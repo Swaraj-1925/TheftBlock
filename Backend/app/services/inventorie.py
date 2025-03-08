@@ -234,7 +234,8 @@ async def get_inventory_products(
                 status=product.status.value,  # Convert enum to string
                 price=product.price,
                 shelf_id=shelf.shelf_id,
-                rack_id=rack.rack_id
+                rack_id=rack.rack_id,
+                supplier_id= product.supplier_id
             )
             for product, shelf, rack in products_data
         ]

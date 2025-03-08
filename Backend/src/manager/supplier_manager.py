@@ -3,7 +3,7 @@ import datetime
 import random
 import uuid
 import asyncio
-from typing import List, Tuple
+from typing import List, Tuple, Dict, Optional
 
 from sqlmodel.ext.asyncio.session import AsyncSession
 from Backend.src.Db.database_management import DatabaseManagement
@@ -16,14 +16,14 @@ class SupplierManager:
         self.session = session
         self.db = DatabaseManagement(session)
 
-    async def create_supplier(self, supplier_id: str, supplier_name: str) -> Supplier:
+    async def create_supplier(self, supplier_id: str, supplier_name: str) -> Dict:
         """Create a new supplier if it doesn't exist"""
         supplier = await self.db.search(Supplier, all_results=False, supplier_id=supplier_id)
         if not supplier:
             supplier = Supplier(supplier_id=supplier_id, supplier_name=supplier_name)
             await self.db.insert(supplier)
             print(f"Created supplier with ID: {supplier_id}")
-        return supplier
+        return supplier.to_dict()
 
     async def link_supplier_to_inventory(self, supplier_id: str, inventory_id: str) -> InventorySupplier:
         """Create a relationship between supplier and inventory"""
@@ -105,7 +105,7 @@ class SupplierManager:
 
         return receipt_id
 
-    async def create_random_products(self, supplier_id: str, supplier_name: str, inventory_id: str, count: int) -> \
+    async def create_random_products(self, supplier_id: str, supplier_name: str, count: int,inventory_id: str=None ) -> \
     Tuple[
         List[Product], str]:
         """Create random products for a supplier and link them to an inventory"""
@@ -135,6 +135,8 @@ class SupplierManager:
             raise Exception(f"Failed to insert products: {str(e)}")
 
             # Create supplier receipt with these products
-        receipt_id = await self.create_supplier_receipt(supplier_id, inventory_id, products)
+        receipt_id = "No inventory_id was provided"
+        if inventory_id:
+            receipt_id = await self.create_supplier_receipt(supplier_id, inventory_id, products)
 
         return products, receipt_id

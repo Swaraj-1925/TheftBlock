@@ -1,6 +1,8 @@
 from typing import Union
 
 from Backend.app.inventory_routes import inventory_router
+from Backend.app.supplier_routes import supplier_router
+from Backend.app.testing_routes import test_router
 from Backend.src.Db.db import get_session, async_engine, create_db_and_tables
 from sqlmodel import SQLModel
 
@@ -16,6 +18,8 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 app.include_router(router=inventory_router)
+app.include_router(router=supplier_router)
+app.include_router(router=test_router)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],  # Change this for security
