@@ -417,7 +417,6 @@ class WarehouseManager:
 
         # Get all sales for this inventory
         sales = await self.db.search(Sale, all_results=True, inventory_id=inventory_id)
-
         # Get all inventory receipts
         inventory_receipts = await self.db.search(
             InventoryReceipt,
@@ -428,6 +427,7 @@ class WarehouseManager:
         # Calculate total value
         total_shelf_value = sum(product.price for product in products_on_shelf)
         total_sales_value = 0
+
         for sale in sales:
             product = await self.db.search(Product, all_results=False, product_id=sale.product_id)
             if product:
@@ -443,7 +443,6 @@ class WarehouseManager:
                 status=ProductStatus.MISSING
             )
             missing_products.extend(products)
-
         statistics = {
             "inventory_id": inventory_id,
             "location": inventory.location,
@@ -453,6 +452,7 @@ class WarehouseManager:
             "products_on_shelf": len(products_on_shelf),
             "total_shelf_value": total_shelf_value,
             "total_sales": len(sales),
+            "sale":sales,
             "total_sales_value": total_sales_value,
             "total_receipts": len(inventory_receipts),
             "missing_products": len(missing_products),

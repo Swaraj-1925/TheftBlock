@@ -1,4 +1,5 @@
 # res_models.py
+import datetime
 from typing import List, Optional
 from pydantic import BaseModel, Field
 
@@ -15,6 +16,11 @@ class SupplierResponse(BaseModel):
     supplier_id: str
     supplier_name: str
 
+class Sale(BaseModel):
+    sale_id: str
+    product_id: str
+    inventory_id: str
+    sale_timestamp: datetime.datetime
 
 class ProductResponse(BaseModel):
     product_id: str
@@ -82,3 +88,4 @@ class InventoryStatisticsResponse(BaseModel):
     total_sales: int
     total_sales_value: float
     total_receipts: int
+    sale:List[Sale]

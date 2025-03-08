@@ -168,7 +168,9 @@ async def get_inventory_statistics(inventory_id: str, session: AsyncSession) -> 
             total_sales_value=inventory_stats['total_sales_value'],
             total_receipts=inventory_stats['total_receipts'],
             missing_products=inventory_stats['missing_products'],
-            estimated_loss_value=inventory_stats['missing_products']
+            estimated_loss_value=inventory_stats['missing_products'],
+            sale=[sale.dict() for sale in inventory_stats["sale"]]
+
         )
     except HTTPException:
         raise
