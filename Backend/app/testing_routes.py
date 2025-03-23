@@ -1,6 +1,6 @@
 from typing import Annotated, List, Dict
 
-from fastapi import APIRouter, Query, Depends, HTTPException,status
+from fastapi import APIRouter, Query, Depends, HTTPException,status,Path
 from sqlmodel.ext.asyncio.session import AsyncSession
 
 from Backend.app.res_models import SupplierResponse, ProductResponse
@@ -31,7 +31,7 @@ async def create_supplier_receipt(
         num_products:Annotated[int,Query()],
         supplier_name:Annotated[str, Query()],
         supplier_id:Annotated[str, Query()],
-        inventory_id: Annotated[str, Query()],
+        inventory_id: Annotated[str, Path()],
         session:AsyncSession = Depends(get_session)):
     try:
         suppler_manager = SupplierManager(session=session)

@@ -61,9 +61,9 @@ The database configuration should follow a setup similar to `Backend/src/config/
    ```sh
    pip install -r requirements.txt
    ```
-3. Start the FastAPI development server:
+3. Start the FastAPI development server: (NOTE: If Your running this on testing env 1st run `python -m Backend.main` )
    ```sh
-   python server.py
+    fastapi dev server.py
    ```
 4. Access API documentation:
    Open [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) in your browser to explore available routes.
