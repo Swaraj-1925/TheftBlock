@@ -6,8 +6,8 @@ import asyncio
 from typing import List, Tuple, Dict, Optional
 
 from sqlmodel.ext.asyncio.session import AsyncSession
-from Backend.src.Db.database_management import DatabaseManagement
-from Backend.src.Db.models import Supplier, Product, SupplierReceipt, SupplierReceiptItem, ProductStatus, \
+from ..Db.database_management import DatabaseManagement
+from ..Db.models import Supplier, Product, SupplierReceipt, SupplierReceiptItem, ProductStatus, \
     InventorySupplier
 
 
@@ -23,7 +23,7 @@ class SupplierManager:
             supplier = Supplier(supplier_id=supplier_id, supplier_name=supplier_name)
             await self.db.insert(supplier)
             print(f"Created supplier with ID: {supplier_id}")
-        return supplier.to_dict()
+        return supplier.model_dump()
 
     async def link_supplier_to_inventory(self, supplier_id: str, inventory_id: str) -> InventorySupplier:
         """Create a relationship between supplier and inventory"""

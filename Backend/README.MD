@@ -37,16 +37,12 @@ The database configuration should follow a setup similar to `Backend/src/config/
 
 ### Steps to Set Up the Project:
 
-1. Create a directory for the project and navigate into it:
-   ```sh
-   mkdir TheftBlock
-   cd TheftBlock
-   ```
-2. Clone the repository:
+
+1. Clone the repository:
    ```sh
    git clone https://github.com/Swaraj-1925/TheftBlock.git
    ```
-3. Navigate to the cloned directory:
+2. Navigate to the cloned directory:
    ```sh
    cd TheftBlock
    ```
@@ -70,11 +66,9 @@ The database configuration should follow a setup similar to `Backend/src/config/
 
 ### Running Main Simulation:
 
-To test the system without a frontend, navigate back one directory from `Backend` and run:
-
+To test the system without a frontend: 
 ```sh
-cd ..
-python -m Backend.main
+python main.py
 ```
 
 ---

@@ -3,7 +3,6 @@ import datetime
 from typing import List, Optional
 from pydantic import BaseModel, Field
 
-from Backend.src.Db.models import ProductStatus
 
 
 # Base Models - These can be reused across different responses

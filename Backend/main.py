@@ -1,10 +1,10 @@
-from Backend.src.Db.database_management import DatabaseManagement
-from Backend.src.Db.models import Product, ProductStatus, Shelf
-from Backend.src.dummy.uhf_rfid import UHF_RFID
-from Backend.src.manager.supplier_manager import SupplierManager
-from Backend.src.Db.db import get_session, async_engine, create_db_and_tables
-from Backend.src.manager.theft_detection_manager import TheftDetectionManager
-from Backend.src.manager.warehouse_manager import WarehouseManager
+from src.Db.database_management import DatabaseManagement
+from src.Db.models import Product, ProductStatus, Shelf
+from src.dummy.uhf_rfid import UHF_RFID
+from src.manager.supplier_manager import SupplierManager
+from src.Db.db import get_session, async_engine, create_db_and_tables
+from src.manager.theft_detection_manager import TheftDetectionManager
+from src.manager.warehouse_manager import WarehouseManager
 import logging
 import asyncio
 import uuid

@@ -3,10 +3,9 @@ from typing import Annotated, List, Dict
 from fastapi import APIRouter, Query, Depends, HTTPException,status,Path
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from Backend.app.res_models import SupplierResponse, ProductResponse
-from Backend.app.services.supplier import make_supplier
-from Backend.src.Db.db import get_session
-from Backend.src.manager.supplier_manager import SupplierManager
+from .res_models import SupplierResponse, ProductResponse
+from src.Db.db import get_session
+from src.manager.supplier_manager import SupplierManager
 
 test_router = APIRouter(prefix="/test",tags=["Testing"])
 

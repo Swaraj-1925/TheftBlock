@@ -1,13 +1,9 @@
-import asyncio
 import datetime
-import hashlib
-import json
-import random
 from typing import Optional, List, Dict, Any, Tuple
 
 from sqlmodel.ext.asyncio.session import AsyncSession
-from Backend.src.Db.database_management import DatabaseManagement
-from Backend.src.Db.models import (
+from ..Db.database_management import DatabaseManagement
+from ..Db.models import (
     Product, ShelfInventory, ShelfScan, ShelfScanItem, Inventory,
     StorageRack, Shelf, ProductStatus, Sale, InventoryReceipt
 )

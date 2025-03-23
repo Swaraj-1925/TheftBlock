@@ -1,13 +1,11 @@
-import asyncio
 import datetime
 import hashlib
-import json
 import random
 from typing import Optional, List, Dict, Any, Tuple
 
 from sqlmodel.ext.asyncio.session import AsyncSession
-from Backend.src.Db.database_management import DatabaseManagement
-from Backend.src.Db.models import Product, ShelfInventory, SupplierReceiptItem, SupplierReceipt, InventoryReceiptItem, \
+from ..Db.database_management import DatabaseManagement
+from ..Db.models import Product, ShelfInventory, SupplierReceiptItem, SupplierReceipt, InventoryReceiptItem, \
     Shelf, InventoryReceipt, StorageRack, ProductStatus, Inventory, Sale, ShelfScan, InventoryOwner
 
 
@@ -218,7 +216,7 @@ class WarehouseManager:
 
     async def scan_shelf(self, shelf_id: str) -> Tuple[ShelfScan, List[Product]]:
         """Perform a scan of a shelf and record found products"""
-        from Backend.src.Db.models import ShelfScan, ShelfScanItem
+        from src.Db.models import ShelfScan, ShelfScanItem
 
         # Create a scan record
         scan_hash = hashlib.sha256(str(datetime.datetime.now()).encode()).hexdigest()[:10]

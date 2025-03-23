@@ -1,9 +1,9 @@
 from fastapi import HTTPException,status
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from Backend.app.res_models import SupplierResponse
-from Backend.app.services.utils import generate_id
-from Backend.src.manager.supplier_manager import SupplierManager
+from app.res_models import SupplierResponse
+from app.services.utils import generate_id
+from src.manager.supplier_manager import SupplierManager
 
 
 def make_supplier(session:AsyncSession,supplier_name:str)->SupplierResponse:

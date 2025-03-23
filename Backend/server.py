@@ -1,9 +1,9 @@
 from typing import Union
 
-from Backend.app.inventory_routes import inventory_router
-from Backend.app.supplier_routes import supplier_router
-from Backend.app.testing_routes import test_router
-from Backend.src.Db.db import get_session, async_engine, create_db_and_tables
+from app.inventory_routes import inventory_router
+from app.supplier_routes import supplier_router
+from app.testing_routes import test_router
+from src.Db.db import get_session, async_engine, create_db_and_tables
 from sqlmodel import SQLModel
 
 from fastapi import FastAPI

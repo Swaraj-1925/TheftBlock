@@ -3,11 +3,11 @@ from typing import Annotated, List, Any
 from fastapi import APIRouter, Query, Depends, HTTPException,status
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from Backend.app.res_models import SupplierResponse, ProductResponse, ProductDetailsResponse
-from Backend.app.services.supplier import make_supplier
-from Backend.src.Db.db import get_session
-from Backend.src.Db.models import Product
-from Backend.src.manager.supplier_manager import SupplierManager
+from .res_models import SupplierResponse, ProductResponse, ProductDetailsResponse
+from .services.supplier import make_supplier
+from src.Db.db import get_session
+from src.Db.models import Product
+from src.manager.supplier_manager import SupplierManager
 
 supplier_router = APIRouter(prefix="/supplier",tags=["Supplier"])
 

@@ -4,9 +4,9 @@ import random
 from typing import List, Optional
 
 from sqlmodel.ext.asyncio.session import AsyncSession
-from Backend.src.Db.database_management import DatabaseManagement
-from Backend.src.dummy.base_sensor import BaseSensor
-from Backend.src.Db.models import Product, ShelfInventory, Sale, Shelf, StorageRack
+from ..dummy.base_sensor import BaseSensor
+from ..Db.database_management import DatabaseManagement
+from ..Db.models import Product, ShelfInventory, Sale, Shelf, StorageRack
 from sqlmodel import select
 
 class UHF_RFID(BaseSensor):

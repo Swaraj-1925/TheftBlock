@@ -1,7 +1,7 @@
 from sqlalchemy.ext.asyncio import create_async_engine
 from sqlmodel.ext.asyncio.session import AsyncSession
 from sqlalchemy.orm import sessionmaker
-from Backend.src.config.constant import DATABASE_URL
+from ..config.constant import DATABASE_URL
 from sqlmodel import SQLModel
 
 #Create database 1st

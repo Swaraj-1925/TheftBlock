@@ -4,12 +4,12 @@ from fastapi import HTTPException,status
 from sqlmodel import select
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from Backend.app.res_models import InventoryResponse, InventoryOwnerResponse, InventoryDetailsResponse, \
+from ..res_models import InventoryResponse, InventoryOwnerResponse, InventoryDetailsResponse, \
     StorageRackResponse, ShelfResponse, ProductResponse, SupplierResponse, InventoryStatisticsResponse, \
     ProductDetailsResponse
-from Backend.src.Db.models import InventoryOwner, Inventory, Supplier, InventorySupplier, StorageRack, Shelf, Product, \
+from src.Db.models import InventoryOwner, Inventory, Supplier, InventorySupplier, StorageRack, Shelf, Product, \
     ProductStatus
-from Backend.src.manager.warehouse_manager import WarehouseManager
+from src.manager.warehouse_manager import WarehouseManager
 
 
 async def get_list_all_inventories(session: AsyncSession) -> List[InventoryResponse]:

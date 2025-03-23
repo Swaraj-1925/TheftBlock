@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
 from watchfiles import awatch
 
-from Backend.app.res_models import InventoryDetailsResponse, InventoryStatisticsResponse, InventoryResponse, \
+from .res_models import InventoryDetailsResponse, InventoryStatisticsResponse, InventoryResponse, \
     ProductDetailsResponse
-from Backend.app.services.inventorie import get_list_all_inventories, get_inventory_details, get_inventory_statistics, \
+from .services.inventorie import get_list_all_inventories, get_inventory_details, get_inventory_statistics, \
     get_inventory_products
-from Backend.src.Db.db import get_session
+from src.Db.db import get_session
 from sqlmodel.ext.asyncio.session import AsyncSession
 
 inventory_router = APIRouter(prefix="/inventory",tags=["inventory"])

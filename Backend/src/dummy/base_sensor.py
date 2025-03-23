@@ -4,8 +4,8 @@ from itertools import product
 
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from Backend.src.Db.database_management import DatabaseManagement
-from Backend.src.Db.models import Product
+from ..Db.database_management import DatabaseManagement
+from ..Db.models import Product
 
 class BaseSensor:
     def __init__(self,rfid_tag: str):
