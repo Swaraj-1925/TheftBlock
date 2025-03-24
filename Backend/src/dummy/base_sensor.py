@@ -4,8 +4,8 @@ from itertools import product
 
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from Backend.src.Db.database_management import DatabaseManagement
-from Backend.src.Db.models import Product
+from ..Db.database_management import DatabaseManagement
+from ..Db.models import Product
 
 class BaseSensor:
     def __init__(self,rfid_tag: str):
@@ -18,7 +18,7 @@ class BaseSensor:
         product_id =f"PRODUCT_{sensor_id_hash}"
         supplier_id = f"SUPPLIER_{sensor_id_hash}"
 
-        se_data = Product(product_id=product_id,rfid_tag=self.sensor_id,product_name="Product")
+        sensor_data = Product(product_id=product_id,rfid_tag=self.sensor_id,product_name="Product")
         try:
             db = DatabaseManagement(session)
             await db.insert(sensor_data)

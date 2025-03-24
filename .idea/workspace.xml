@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c305951e-7a74-46ed-87b5-26505d484336" name="Changes" comment="FEATURE: Implemented check for theft on shelf after an interval" />
+    <list default="true" id="c305951e-7a74-46ed-87b5-26505d484336" name="Changes" comment="FEATURES by Swaraj: Added test file for Frontend">
+      <change afterPath="$PROJECT_DIR$/Backend/app/services/supplier.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/app/services/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/app/supplier_routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/app/testing_routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/app/res_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app/res_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/app/services/inventorie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app/services/inventorie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/manager/supplier_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/manager/supplier_manager.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +45,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Swaraj-1925/TheftBlock.git&quot;,
-    &quot;accountId&quot;: &quot;92a124b3-fa90-45fd-8074-e7f082c0a24a&quot;
+    &quot;accountId&quot;: &quot;f4e36506-4d81-432d-b4f3-798b4f200ad8&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -49,33 +59,69 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;v1.0&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/TheftBlock/TheftBlock/Frontend/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\TheftBlock\TheftBlock\Frontend\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\TheftBlock\TheftBlock\Backend" />
+      <recent name="E:\TheftBlock\TheftBlock\Backend\src" />
+      <recent name="E:\TheftBlock\TheftBlock\Backend\app" />
       <recent name="C:\Users\akash\PycharmProjects\TheftBlock\Backend\src\manager" />
       <recent name="C:\Users\akash\PycharmProjects\TheftBlock\Backend\src" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TheftBlock" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Backend" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="E:\TheftBlock\TheftBlock\Backend\server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.server" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.25659.43" />
-        <option value="bundled-python-sdk-181015f7ab06-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.25659.43" />
+        <option value="bundled-python-sdk-14705d77f0bb-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.25659.43" />
       </set>
     </attachedChunks>
   </component>
@@ -140,7 +186,55 @@
       <option name="project" value="LOCAL" />
       <updated>1741202274055</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="FEATURE: Reimplmented warehouse_manager , main, supplier_manager, models ,added requirements.txt,">
+      <option name="closed" value="true" />
+      <created>1741350741642</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1741350741642</updated>
+    </task>
+    <task id="LOCAL-00008" summary="FEATURES by Swaraj: Reimplemented warehouse_manager , main, supplier_manager, models ,added requirements.txt,">
+      <option name="closed" value="true" />
+      <created>1741350842286</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1741350842286</updated>
+    </task>
+    <task id="LOCAL-00009" summary="FEATURES by Swaraj: Implemented Following routes for inventories , get all , get specific, get statistical , get products">
+      <option name="closed" value="true" />
+      <created>1741378251365</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1741378251365</updated>
+    </task>
+    <task id="LOCAL-00010" summary="FEATURES by Swaraj: Implemented Readme in Backend and added tag for inventory routes">
+      <option name="closed" value="true" />
+      <created>1741380195114</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1741380195114</updated>
+    </task>
+    <task id="LOCAL-00011" summary="FEATURES by Swaraj: Added sales in return of statistics , Added description for inventory routes">
+      <option name="closed" value="true" />
+      <created>1741434912012</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1741434912012</updated>
+    </task>
+    <task id="LOCAL-00012" summary="FEATURES by Swaraj: Added test file for Frontend">
+      <option name="closed" value="true" />
+      <created>1741458518393</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1741458518393</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +258,24 @@
     <MESSAGE value="FEATURE: Modified Model schema and implmented product maneger" />
     <MESSAGE value="FEATURE: Implemented theft detection between supplier and warehouse and warehouse and consumer" />
     <MESSAGE value="FEATURE: Implemented check for theft on shelf after an interval" />
-    <option name="LAST_COMMIT_MESSAGE" value="FEATURE: Implemented check for theft on shelf after an interval" />
+    <MESSAGE value="FEATURE: Reimplmented warehouse_manager , main, supplier_manager, models ,added requirements.txt," />
+    <MESSAGE value="FEATURES by Swaraj: Reimplemented warehouse_manager , main, supplier_manager, models ,added requirements.txt," />
+    <MESSAGE value="FEATURES by Swaraj: Implemented Following routes for inventories , get all , get specific, get statistical , get products" />
+    <MESSAGE value="FEATURES by Swaraj: Implemented Readme in Backend and added tag for inventory routes" />
+    <MESSAGE value="FEATURES by Swaraj: Added sales in return of statistics , Added description for inventory routes" />
+    <MESSAGE value="FEATURES by Swaraj: Added test file for Frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="FEATURES by Swaraj: Added test file for Frontend" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Backend/src/manager/warehouse_manager.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TheftBlock$main.coverage" NAME="main Coverage Results" MODIFIED="1741174677435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Backend" />

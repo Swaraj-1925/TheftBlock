@@ -1,8 +1,4 @@
-from mako.parsetree import Expression
-from sqlalchemy import False_
-from sqlalchemy.sql.functions import mode
 from sqlmodel.ext.asyncio.session import AsyncSession
-import logging
 
 from typing import Dict, Type,Any
 from sqlmodel import SQLModel, select
@@ -11,11 +7,12 @@ class DatabaseManagement:
     def __init__(self, session: AsyncSession) -> None:
         self.session = session
 
-    async def insert(self, model: SQLModel):
+    async def insert(self, model: SQLModel,auto_commit:bool=True):
         try:
             self.session.add(model)
-            await self.session.commit()
-            await self.session.refresh(model)
+            if auto_commit:
+                await self.session.commit()
+                await self.session.refresh(model)
             return model
         except Exception as e:
             print(f"Database insert error: {str(e)}")
