@@ -22,7 +22,7 @@ app.include_router(router=supplier_router)
 app.include_router(router=test_router)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Change this for security
+    allow_origins=["http://localhost:8000"],  # Change this for security
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
