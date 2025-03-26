@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import MetricCard from "./MetricCard"
 import InventoryTable from "./InventoryTable"
-import { fetchInventoryData, fetchInventoryStatistics } from "../api/inventory"
+import { fetchInventoryData, fetchInventoryStatistics } from "../api/inventory.jsx"
 
 const Dashboard = ({ inventoryId, refreshTrigger, onSelectProduct }) => {
     const [inventoryData, setInventoryData] = useState({

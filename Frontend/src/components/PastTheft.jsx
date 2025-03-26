@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { fetchPastThefts, getTheftDetails } from "../api/theft"
+import { fetchPastThefts, getTheftDetails } from "../api/theft.jsx"
 import { AlertTriangle, ChevronLeft } from "lucide-react"
 
 const PastTheft = ({ inventoryId, refreshTrigger, onSelectTheft, selectedTheft }) => {

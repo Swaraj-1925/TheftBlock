@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Outlet } from "react-router-dom"
 import Sidebar from "./Sidebar"
-import { fetchInventories } from "../api/inventory"
+import { fetchInventories } from "../api/inventory.jsx"
 
 function Layout() {
     const [activeInventory, setActiveInventory] = useState(null)

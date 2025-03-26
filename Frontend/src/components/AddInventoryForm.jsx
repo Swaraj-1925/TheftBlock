@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react"
 import { X } from "lucide-react"
 import { ProductStatus } from "../constants/productStatus"
-import { createTestProducts, createTestProductsForInventory } from "../api/inventory"
-import { createSupplier } from "../api/supplier"
+import { createTestProducts, createTestProductsForInventory } from "../api/inventory.jsx"
+import { createSupplier } from "../api/supplier.jsx"
 
 const AddInventoryForm = ({ onClose, onSubmit, inventoryId }) => {
     const [formType, setFormType] = useState("product")

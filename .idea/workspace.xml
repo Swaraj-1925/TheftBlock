@@ -5,15 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c305951e-7a74-46ed-87b5-26505d484336" name="Changes" comment="FEATURES by Swaraj: Added test file for Frontend">
-      <change afterPath="$PROJECT_DIR$/Backend/app/services/supplier.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/app/services/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/app/supplier_routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/app/testing_routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TheftBlock.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TheftBlock.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/app/res_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app/res_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/app/services/inventorie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app/services/inventorie.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/manager/supplier_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/manager/supplier_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/api/inventory.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/api/inventory.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/api/supplier.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/api/supplier.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/api/theft.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/api/theft.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/api/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/api/user.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/components/AddInventoryForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/components/AddInventoryForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/components/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/components/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/components/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/components/Layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/components/PastTheft.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/components/PastTheft.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/components/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/components/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/components/UserProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/components/UserProfile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/ProductDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/ProductDetails.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/TheftReports.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/TheftReports.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +51,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Swaraj-1925/TheftBlock.git&quot;,
-    &quot;accountId&quot;: &quot;f4e36506-4d81-432d-b4f3-798b4f200ad8&quot;
+    &quot;accountId&quot;: &quot;92a124b3-fa90-45fd-8074-e7f082c0a24a&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -59,24 +65,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;v1.0&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/TheftBlock/TheftBlock/Frontend/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.app.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "v1.1",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "/home/swaraj/Projects/TheftBlock",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\TheftBlock\TheftBlock\Frontend\src" />
@@ -103,6 +109,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="E:\TheftBlock\TheftBlock\Backend\server.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -121,7 +128,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-14705d77f0bb-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.25659.43" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.26053.29" />
+        <option value="bundled-python-sdk-b1dbf8ef85a6-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.26053.29" />
       </set>
     </attachedChunks>
   </component>
@@ -137,6 +145,8 @@
       <workItem from="1741150216928" duration="10201000" />
       <workItem from="1741174232241" duration="23370000" />
       <workItem from="1741202660775" duration="90000" />
+      <workItem from="1742997266874" duration="93000" />
+      <workItem from="1742997386102" duration="909000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />

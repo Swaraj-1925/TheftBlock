@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Package, Plus } from "lucide-react"
 import AddInventoryForm from "./AddInventoryForm"
-import { addInventoryItem, fetchInventoryData } from "../api/inventory"
+import { addInventoryItem, fetchInventoryData } from "../api/inventory.jsx"
 
 const Sidebar = ({ inventories = [], activeInventory, setActiveInventory, onRefresh }) => {
     const [showAddForm, setShowAddForm] = useState(false)

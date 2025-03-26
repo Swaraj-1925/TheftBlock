@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { useParams, useNavigate, useOutletContext } from "react-router-dom"
-import { getProductDetails } from "../api/inventory"
+import { getProductDetails } from "../api/inventory.jsx"
 import { Package, ArrowLeft } from "lucide-react"
 
 function ProductDetails() {

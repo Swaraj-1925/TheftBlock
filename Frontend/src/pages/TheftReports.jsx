@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { useOutletContext } from "react-router-dom"
-import { fetchPastThefts } from "../api/theft"
+import { fetchPastThefts } from "../api/theft.jsx"
 import { AlertTriangle, Search } from "lucide-react"
 
 function TheftReports() {

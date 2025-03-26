@@ -1,8 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { fetchUserProfile } from "../api/user"
-import { getProductDetails } from "../api/inventory"
+import { fetchUserProfile } from "../api/user.jsx"
+import { getProductDetails } from "../api/inventory.jsx"
 import { Package, User } from "lucide-react"
 
 const UserProfile = ({ selectedProduct, inventory }) => {
